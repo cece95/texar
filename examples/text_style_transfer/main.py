@@ -1,3 +1,4 @@
+#!/bin/python3.6
 # Copyright 2018 The Texar Authors. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -45,6 +46,11 @@ FLAGS = flags.FLAGS
 
 config = importlib.import_module(FLAGS.config)
 
+my_devices = tf.config.experimental.list_physical_devices(device_type='CPU')
+tf.config.experimental.set_visible_devices(devices= my_devices, device_type='CPU')
+
+# To find out which devices your operations and tensors are assigned to
+tf.debugging.set_log_device_placement(True)
 
 def _main(_):
     # Data

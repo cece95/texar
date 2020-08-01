@@ -21,16 +21,16 @@ lambda_g = 0.1  # Weight of the classification loss
 gamma_decay = 0.5  # Gumbel-softmax temperature anneal rate
 
 train_data = {
-    'batch_size': 16,
+    'batch_size': 64,
     # 'seed': 123,
     'datasets': [
         {
-            'files': './data/wikismall/wikismall.train.text',
-            'vocab_file': './data/wikismall/text.vocab',
+            'files': './data/wikilarge/wikilarge.train.text',
+            'vocab_file': './data/wikilarge/vocab',
             'data_name': ''
         },
         {
-            'files': './data/wikismall/wikismall.train.labels',
+            'files': './data/wikilarge/wikilarge.train.labels',
             'data_type': 'int',
             'data_name': 'labels'
         }
@@ -39,12 +39,12 @@ train_data = {
 }
 
 val_data = copy.deepcopy(train_data)
-val_data['datasets'][0]['files'] = './data/wikismall/wikismall.dev.text'
-val_data['datasets'][1]['files'] = './data/wikismall/wikismall.dev.labels'
+val_data['datasets'][0]['files'] = './data/wikilarge/wikilarge.dev.text'
+val_data['datasets'][1]['files'] = './data/wikilarge/wikilarge.dev.labels'
 
 test_data = copy.deepcopy(train_data)
-test_data['datasets'][0]['files'] = './data/wikismall/wikismall.test.text'
-test_data['datasets'][1]['files'] = './data/wikismall/wikismall.test.labels'
+test_data['datasets'][0]['files'] = './data/wikilarge/wikilarge.test.text'
+test_data['datasets'][1]['files'] = './data/wikilarge/wikilarge.test.labels'
 
 model = {
     'dim_c': 200,
@@ -81,8 +81,8 @@ model = {
             },
             'attention_layer_size': 700,
         },
-        'max_decoding_length_train': 100,
-        'max_decoding_length_infer': 100,
+        'max_decoding_length_train': 70,
+        'max_decoding_length_infer': 70,
     },
     'classifier': {
         'kernel_size': [3, 4, 5],

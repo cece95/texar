@@ -14,9 +14,6 @@
 
 **Texar** is a toolkit aiming to support a broad set of machine learning, especially natural language processing and text generation tasks. Texar provides a library of easy-to-use ML modules and functionalities for composing whatever models and algorithms. The tool is designed for both researchers and practitioners for fast prototyping and experimentation.
 
-Texar was originally developed and is 
-actively contributed by [Petuum](https://petuum.com/) and [CMU](https://www.cmu.edu/) in collaboration with other institutes.
-A mirror of this repository is maintained by [Petuum Open Source](https://github.com/petuum).
 
 ### Key Features
 * **Two Versions, (Mostly) Same Interfaces**. Texar-TensorFlow (this repo) and **[Texar-PyTorch](https://github.com/asyml/texar-pytorch)** have mostly the same interfaces. Both further combine the best design of TF and PyTorch:
@@ -139,10 +136,3 @@ ACL 2019
 
 ### License
 [Apache License 2.0](./LICENSE)
-
-### Companies and Universities Supporting Texar
-<p float="left">
-   <img src="https://github.com/asyml/texar/blob/master/docs/_static/img/Petuum.png" width="200" align="top">
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   <img src="https://asyml.io/assets/institutions/cmu.png", width="200" align="top">
-</p>
